@@ -1,0 +1,4 @@
+[submodule "ci-as-code"]
+	path = ci-as-code
+	url = git@github.com:sparrow-cloudguider/CIOps-SP.git
+	branch = master
