@@ -3,19 +3,19 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "egov-cicd-terraform-state-store"
+  bucket = "cicd-sparrow"  
 
   versioning {
     enabled = true
   }
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
 resource "aws_dynamodb_table" "terraform_state_lock" {
-  name           = "egov-cicd-terraform-state-store"
+  name           = "cicd-sparrow"
   read_capacity  = 1
   write_capacity = 1
   hash_key       = "LockID"
