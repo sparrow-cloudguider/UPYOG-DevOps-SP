@@ -1,6 +1,6 @@
 {{- with index .Values "cluster-configs" "nginx-errors" -}}
 {{- if .enabled }}
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Ingress
 metadata:
   annotations:
